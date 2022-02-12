@@ -24,11 +24,6 @@ function getBalance(statement) {
 	}, 0)
 }
 
-function formatDate(date) {
-	return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')
-		}-${date.getDate()} `
-}
-
 app.post('/account', (request, response) => {
 	const accData = request.body.data
 	accData.id = uuidv4()
